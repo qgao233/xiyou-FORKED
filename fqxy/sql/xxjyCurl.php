@@ -7,11 +7,14 @@ include("./url/url.php");//获取小轩家园地址和本游戏地址
 //准备好要发送给服务器的数据
 $post_data = $wjid . '|' . $password . '|' . $url . '|' . $qy;
 
+// 使用内部地址进行 cURL 通信（Docker 容器内部）
+$curl_url = isset($internal_host) ? $internal_host : $xxjyurl;
+
 //初始化 curl
 $ch = curl_init();
 
 //将玩家id和md5值传送给服务器验证防止人为修改
-curl_setopt($ch, CURLOPT_URL, 'http://' . $xxjyurl . '/sql/xxjyCurl.php');
+curl_setopt($ch, CURLOPT_URL, 'http://' . $curl_url . '/sql/xxjyCurl.php');
 //这里设置成 post 方式
 curl_setopt($ch, CURLOPT_POST, 1);
 //这里添加需要 post 的数据

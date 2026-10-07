@@ -3,9 +3,10 @@
 //连接数据库
 include("../sql/mysql.php");//调用数据库连接
 
-$sqid = $wjid . "_" . $xxjy_qy;
+// wjid 是社区ID（如 10000001），对应 o_user_list.uid + 10000000
+$game_uid = $wjid - 10000000;
 $q2 = "o_user_list";
-$sql = mysql_query("select uid,password from $q2 where sqid='$sqid'", $conn);
+$sql = mysql_query("select uid,password from $q2 where uid='$game_uid'", $conn);
 $info1 = @mysql_fetch_array($sql);
 $uid = $info1[uid];
 $pass1 = $info1[password];
@@ -35,7 +36,8 @@ if ($uid != "") {
         //判断文件夹是否存在
         //路径
         $path = '../ache/' . $wjini;
-        $dir = iconv("UTF-8", "GBK", "$path");
+        // Linux 环境直接使用 UTF-8 路径
+        $dir = $path;
         if (!file_exists($dir)) {
             mkdir($dir, 0777, true);
         } else {

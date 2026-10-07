@@ -23,7 +23,8 @@ $inina="user.ini";
 //判断文件夹是否存在
 //路径
 $path='../ache/'.$wjid;
-$dir = iconv("UTF-8", "GBK", "$path");
+// Linux 环境直接使用 UTF-8 路径
+$dir = $path;
         if (!file_exists($dir)){
             mkdir ($dir,0777,true);
         } else {
@@ -40,11 +41,11 @@ include("../sql/mysql.php");//调用数据库连接
 
 
 mysql_query("set names utf8");
-$sql=mysql_query("select uid,password,name from o_user_list where password='$password'",$conn);
+// 使用 uid 查询，wjid = uid + 10000000
+$sql=mysql_query("select uid,password,name from o_user_list where uid='" . ($wjid - 10000000) . "'",$conn);
 $info1=@mysql_fetch_array($sql);
 $pass1=$info1[password];
 $uid=$info1[uid];
-$pass=md5($_POST['password'].'ALL_PS');
 $name=$info1[name];
 $wjini=$uid+10000000;
 

@@ -78,11 +78,13 @@ echo "<a href=http://".$url."/fqxy/gm.php?wjid=$wjid&&pass=$password&&gid=1><fon
 include("../url/url.php");
 $xyurl="http://".$xxjyurl."/admin/login.php";
 $zcxx="<font color=red>当前验证信息失效,请重新登录</font>"."<br><br><a href='login.php'><font color=blue>返回GM登录</font></a>"."<br>";
+echo $zcxx;
 }
 } else {
 include("../url/url.php");
 $xyurl="http://".$xxjyurl."/admin/login.php";
 $zcxx="<font color=red>当前验证信息失效,请重新登录</font>"."<br><br><a href='login.php'><font color=blue>返回GM登录</font></a>"."<br>";
+echo $zcxx;
 }
 
 ?>

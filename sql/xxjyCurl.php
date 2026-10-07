@@ -7,7 +7,8 @@ foreach ($arguments_arr as $val) {
 }
 
 $wjid = $a[0];
-$xxjy_pass = $a[1];
+$password = $a[1];  // 改为 $password 以匹配 ini/user_ini.php 的期望
+$xxjy_pass = $a[1]; // 保留兼容
 $xxyou_url = $a[2];
 $xxyou_qy = $a[3];
 
@@ -51,11 +52,15 @@ if ($xxyou_url == $url) {
 //将信息回调给游戏
 $post_data = $yxhe . '|' . $wjid . '|' . $xxjy_pass . '|' . $xxyou_qy;
 
+// 使用内部地址进行 cURL 通信（Docker 容器内部）
+include_once(__DIR__ . '/../fqxy/url/url.php');
+$curl_url = isset($internal_host) ? $internal_host : $xxyou_url;
+
 //初始化 curl
 $ch = curl_init();
 
 //将玩家id和md5值传送给服务器验证防止人为修改
-curl_setopt($ch, CURLOPT_URL, 'http://' . $xxyou_url . '/fqxy/sql/yxCurl.php');
+curl_setopt($ch, CURLOPT_URL, 'http://' . $curl_url . '/fqxy/sql/yxCurl.php');
 //这里设置成 post 方式
 curl_setopt($ch, CURLOPT_POST, 1);
 //这里添加需要 post 的数据

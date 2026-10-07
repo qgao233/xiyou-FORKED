@@ -1,0 +1,32 @@
+# Git
+.git
+.gitignore
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker 自身文件（避免递归）
+docker-compose.yml
+docker-compose.override.yml
+
+# 文档和图片（非运行时必需）
+README.md
+images/*.jpg
+images/*.gif
+images/*.ico
+images/xiyou-home.jpg
+
+# 开发文件
+*.log
+npm-debug.log
+
+# 临时文件
+*.tmp
+*.bak

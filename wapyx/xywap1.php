@@ -103,14 +103,6 @@
                 <table>
 
 
-                    <!--<tr>-->
-                    <!--<td><div class="lbg"><div class="blue circle">5</div></div></td>-->
-                    <!--<td><div class="lbg"><a href="xywap3.php-->
-                    <? //echo $xxjyurl;echo "&&qy=2"?><!--" style='color:green'>纯净新【宝象国】(11.26启动)</a></div></td>-->
-                    <!--<td><div class="lbg"><a href="xywap3.php-->
-                    <? //echo $xxjyurl;echo "&&qy=2"?><!--" style='color:green'>进入游戏</a></div></td>-->
-                    <!--</tr>-->
-
                     <tr>
                         <td>
                             <div class="lbg">
@@ -119,14 +111,13 @@
                         </td>
                         <td>
                             <div class="lbg"><a href="xywap3.php<? echo $xxjyurl;
-                                echo "&&qy=1" ?>" style='color:green'>补充值【傲来国】(11.26启动)</a></div>
+                                echo "&&qy=4" ?>" style='color:green'>乌鸡国西游（4区）</a></div>
                         </td>
                         <td>
                             <div class="lbg"><a href="xywap3.php<? echo $xxjyurl;
-                                echo "&&qy=1" ?>" style='color:green'>进入游戏</a></div>
+                                echo "&&qy=4" ?>" style='color:green'>进入游戏</a></div>
                         </td>
                     </tr>
-
 
                     <tr>
                         <td>
@@ -135,7 +126,12 @@
                             </div>
                         </td>
                         <td>
-                            <div class="lbg"> 老3区【乌鸡国】（关停）</div>
+                            <div class="lbg"><a href="xywap3.php<? echo $xxjyurl;
+                                echo "&&qy=3" ?>" style='color:green'>水帘洞西游（3区）</a></div>
+                        </td>
+                        <td>
+                            <div class="lbg"><a href="xywap3.php<? echo $xxjyurl;
+                                echo "&&qy=3" ?>" style='color:green'>进入游戏</a></div>
                         </td>
                     </tr>
 
@@ -146,7 +142,12 @@
                             </div>
                         </td>
                         <td>
-                            <div class="lbg"> 老2区【女儿国】（关停）</div>
+                            <div class="lbg"><a href="xywap3.php<? echo $xxjyurl;
+                                echo "&&qy=2" ?>" style='color:green'>花果山西游（2区）</a></div>
+                        </td>
+                        <td>
+                            <div class="lbg"><a href="xywap3.php<? echo $xxjyurl;
+                                echo "&&qy=2" ?>" style='color:green'>进入游戏</a></div>
                         </td>
                     </tr>
 
@@ -157,7 +158,12 @@
                             </div>
                         </td>
                         <td>
-                            <div class="lbg"> 老1区【女儿国】（关停）</div>
+                            <div class="lbg"><a href="xywap3.php<? echo $xxjyurl;
+                                echo "&&qy=1" ?>" style='color:green'>公测一区西游（1区）</a></div>
+                        </td>
+                        <td>
+                            <div class="lbg"><a href="xywap3.php<? echo $xxjyurl;
+                                echo "&&qy=1" ?>" style='color:green'>进入游戏</a></div>
                         </td>
                     </tr>
 
